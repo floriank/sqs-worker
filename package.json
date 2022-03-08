@@ -1,0 +1,49 @@
+{
+  "name": "sqs-worker",
+  "version": "1.0.0",
+  "description": "A lib for creating workers against a SQS pipeline",
+  "main": "index.js",
+  "scripts": {
+    "test": "ts-mocha test/**/*.{spec,test}.ts",
+    "build": "tsc -p tsconfig.json",
+    "build:watch": "tsc -w -p tsconfig.json",
+    "format": "eslint -c .eslintrc.json --fix src/**/*.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/floriank/sqs-worker.git"
+  },
+  "keywords": [
+    "typescript",
+    "sqs",
+    "AWS",
+    "worker",
+    "consumer"
+  ],
+  "author": "Florian Kraft",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/floriank/sqs-worker/issues"
+  },
+  "homepage": "https://github.com/floriank/sqs-worker#readme",
+  "dependencies": {
+    "@aws-sdk/client-sqs": "^3.53.0"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.3.0",
+    "@types/chai-as-promised": "^7.1.5",
+    "@types/expect": "^24.3.0",
+    "@types/node": "^17.0.21",
+    "@types/sinon-chai": "^3.2.8",
+    "@typescript-eslint/eslint-plugin": "^5.14.0",
+    "chai": "^4.3.6",
+    "chai-as-promised": "^7.1.1",
+    "eslint": "^8.10.0",
+    "eslint-config-prettier": "^8.5.0",
+    "prettier": "2.5.1",
+    "sinon-chai": "^3.7.0",
+    "ts-mocha": "^9.0.2",
+    "ts-sinon": "^2.0.2",
+    "typescript": "^4.6.2"
+  }
+}

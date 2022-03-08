@@ -1,0 +1,25 @@
+{
+  "include": ["src/**/*.ts"],
+  "exclude": [
+    "test/**/*.spec.ts",
+    "test/**/*.test.ts",
+    "built",
+    "node_modules",
+    "test"
+  ],
+  "compilerOptions": {
+    "outDir": "./built",
+    "allowJs": false,
+    "declaration": true,
+    "sourceMap": false,
+    "moduleResolution": "node",
+    "pretty": true,
+    "rootDir": "./",
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "allowUnreachableCode": false,
+    "allowUnusedLabels": false,
+    "noImplicitReturns": true,
+    "lib": ["es2021", "dom"]
+  }
+}

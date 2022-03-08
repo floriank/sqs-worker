@@ -1,0 +1,23 @@
+version: "3.8"
+x-shared-aws-env: &shared-env
+  AWS_REGION: us-east-1
+  AWS_ACCESS_KEY_ID: test
+  AWS_SECRET_ACCESS_KEY: test
+services:
+  localstack:
+    image: "localstack/localstack"
+    environment:
+      <<: *shared-env
+      DEBUG: 1
+      SERVICES: sqs
+      INIT_SCRIPTS_PATH: /seeds
+    volumes:
+      - ./infrastructure:/seeds
+  test:
+    build: .
+    environment:
+      <<: *shared-env
+    volumes:
+      - .:/app
+    depends_on:
+      - localstack
